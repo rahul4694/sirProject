@@ -38,7 +38,7 @@
         {
             "post":
             {
-                "summary": "Get list of orders in the system",
+                "summary": "Get list of clients in the system",
                 "tags": [
                     "CSV MANAGEMENT"
                 ],
