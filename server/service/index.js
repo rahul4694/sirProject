@@ -15,18 +15,6 @@ var COMMON_SERVICES = {
         return array.findIndex(ind => ind[key] == value);
     },
 
-    //Request NPM options
-    _requestOptions: function() {
-
-        var options = {
-            baseUrl: '',
-            uri: '',
-            method: "POST"
-        }
-
-        return options;
-    },
-
     // Build mongoDB find query
     _buildFindQuery: function(where, options) {
         // if (!source) return "Invaild source";

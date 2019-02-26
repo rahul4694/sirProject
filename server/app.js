@@ -24,7 +24,7 @@ require('./config/express')(app);
 require('./routes')(app);
 // Start server
 server.listen(config.port, config.ip, function () {
- console.log(chalk.greenBright('Hey! %s Plaform HR server listening on http://%s:%d, in %s mode'), process.env.USER, config.ip, config.port, app.get('env'));
+ console.log(chalk.greenBright('Hey! %s Todo App server listening on http://%s:%d, in %s mode'), process.env.USER, config.ip, config.port, app.get('env'));
 });
 
 process.on('uncaughtException', function(err) {
