@@ -1,0 +1,189 @@
+{
+    "swagger": "2.0",
+    "info":
+    {
+        "version": "1.0.0",
+        "title": "Todo Application",
+        "description": "Todo Application API Documentations",
+        "license":
+        {
+            "name": "Home",
+            "url": ""
+        }
+    },
+    "host": "0.0.0.0:3000",
+    "basePath": "/api/",
+    "tags": [
+    {
+        "name": "CSV MANAGEMENT",
+        "description": "CSV API's in the system"
+    },
+    {
+        "name": "BUTLER MANAGEMENT",
+        "description": "Butler API's in the system"
+    }],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths":
+    {
+        "/client":
+        {
+            "post":
+            {
+                "summary": "Get list of orders in the system",
+                "tags": [
+                    "CSV MANAGEMENT"
+                ],
+                "parameters": [
+                {
+                    "name": "Order Filters Query",
+                    "in": "body",
+                    "description": "Filter orders",
+                    "schema":
+                    {
+                        "$ref": "#/definitions/FILTER_QUERY"
+                    }
+                }],
+                "responses":
+                {}
+            }
+        },
+
+        "/client/create":
+        {
+            "post":
+            {
+                "summary": "Create client in the system",
+                "tags": [
+                    "CSV MANAGEMENT"
+                ],
+                "parameters": [
+                {
+                    "name": "Basic User Information",
+                    "in": "body",
+                    "description": "Create client with basic information!",
+                    "schema":
+                    {
+                        "$ref": "#/definitions/CLIENT_MODEL"
+                    }
+                }],
+                "responses":
+                {}
+            }
+        },
+
+        "/order":
+        {
+            "post":
+            {
+                "summary": "Get list of orders in the system",
+                "tags": [
+                    "CSV MANAGEMENT"
+                ],
+                "parameters": [
+                {
+                    "name": "Order Filters Query",
+                    "in": "body",
+                    "description": "Filter orders",
+                    "schema":
+                    {
+                        "$ref": "#/definitions/FILTER_QUERY"
+                    }
+                }],
+                "responses":
+                {}
+            }
+        },
+
+        "/order/import":
+        {
+            "parameters": [],
+            "post":
+            {
+                "summary": "import order from csv url in the system",
+                "tags": [
+                    "CSV MANAGEMENT"
+                ],
+                "parameters": [
+                {
+                    "name": "CSV URL",
+                    "in": "body",
+                    "description": "Provide csv file url to import order",
+                    "schema":
+                    {
+                        "properties":
+                        {
+                            "url":
+                            {
+                                "type": "string",
+                                "example": "http://localhost:3000/assets/file/file.csv"
+                            }
+                        }
+                    }
+                }],
+                "responses":
+                {}
+            }
+        }
+    },
+    "definitions":
+    {
+        "CLIENT_MODEL":
+        {
+            "properties":
+            {
+                "firstName":
+                {
+                    "type": "string",
+                    "example": "test"
+                },
+                "lastName":
+                {
+                    "type": "string",
+                    "example": "name"
+                }
+            }
+        },
+
+        "FILTER_QUERY":
+        {
+            "properties":
+            {
+                "where":
+                {
+                    "type": "object",
+                    "properties":
+                    {
+                        "q":
+                        {
+                            "type": "string",
+                            "example": "Search by keyword.."
+                        }
+                    }
+                },
+                "page":
+                {
+                    "type": "number",
+                    "example": "1"
+                },
+                "limit":
+                {
+                    "type": "number",
+                    "example": "30"
+                },
+                "skip":
+                {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
