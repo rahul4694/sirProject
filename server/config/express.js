@@ -66,12 +66,12 @@ module.exports = function(app) {
         app.use(express.static(path.join(config.root, 'client')));
         app.set('appPath', path.join(config.root, 'client'));
         app.use(morgan('combined', { stream: accessLogStream }));
-        app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, null, null, customCssHideSwggerHeade, customfavIconSwagger, null, "API's Documentation - Platform HR"));
+        app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, null, null, customCssHideSwggerHeade, customfavIconSwagger, null, "API's Documentation - ToDo App"));
 
     }
 
     if ('development' === env) {
-        app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, null, null, customCssHideSwggerHeade, customfavIconSwagger, null, "API's Documentation - Platform HR"));
+        app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, null, null, customCssHideSwggerHeade, customfavIconSwagger, null, "API's Documentation - ToDo App"));
         app.use(express.static(path.join(config.root, 'client')));
         app.set('appPath', path.join(config.root, 'client'));
         app.use(morgan('combined', { stream: accessLogStream }));
