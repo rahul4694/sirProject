@@ -8,16 +8,14 @@ let should = chai.should();
 chai.use(chaiHttp);
 
 //Our parent block
-describe('Books', () => {
-    beforeEach(() => { //Before each test we empty the database
-        server = require('../../app');
-        // server.body.should.be.a('object');
-       
+describe('CSV CLIENT', () => {
+    beforeEach(() => { //Before each test run the server
+        server = require('../../app');       
     });
     /*
      * Test the /GET route
      */
-    describe('/GET Client List', () => {
+    describe('GET client with pagination', () => {
 
         //Getting All Clients List
         it('it should GET all the Clients List', (done) => {

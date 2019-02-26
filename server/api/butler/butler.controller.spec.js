@@ -8,10 +8,9 @@ let should = chai.should();
 chai.use(chaiHttp);
 
 //Our parent block
-describe('Books', () => {
-    beforeEach(() => { //Before each test we empty the database
+describe('BUTLER MANGEMENT', () => {
+    beforeEach(() => { //Before each test run the server
         server = require('../../app');
-        // server.body.should.be.a('object');
        
     });
 
