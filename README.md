@@ -11,7 +11,7 @@ A Node app built with MongoDB, Mocha and swagger. For demonstration purposes onl
 ## Requirements
 
 - [Node and npm](http://nodejs.org)
-- MongoDB: Make sure you have your own local or remote MongoDB database URI configured in `/server/config/connections.js`
+- MongoDB: Make sure you have your own local or remote MongoDB database URI configured.
 
 ## Installation
 
