@@ -6,6 +6,7 @@ A Node app built with MongoDB, Mocha and swagger. For demonstration purposes onl
 - Swagger for API documentation. 
 - MongoDB to store data.
 - Mocha and Chai for testing node API
+- Seeding dummy data
 
 ## Requirements
 
@@ -15,11 +16,13 @@ A Node app built with MongoDB, Mocha and swagger. For demonstration purposes onl
 ## Installation
 
 1. Clone the repository
-2. Install the application: `npm install`
-3. Edit env file according to your configuration(if required) `.env`
-3. Start the server: `node server/app.js`
-4. View in browser at `http://localhost:3000`
-5. To run test: `npm test`
+2. Go to app directory `cd todo`
+3. Install the application: `npm install`
+4. Edit env file according to your configuration(if required) `.env`
+5. To populate dummy data set `SEED_DB = true` in `.env` file
+6. Start the server: `node server/app.js`
+7. View in browser at `http://localhost:3000`
+8. To run test: `npm test`
 
 ## Application comprise of two module : 
 # CSV Data Import Module Feature 
