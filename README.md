@@ -22,7 +22,7 @@ Mocha and Chai for testing node API
 5. To run test: `npm test`
 
 ## Application comprise of two module : 
-# CSV DataImport Module Feature 
+# CSV Data Import Module Feature 
 - Contain list of client in `client collection`.
 - Import request from CSV file URL into `order collection`.
 - Only import request of clients(present in client collection).
