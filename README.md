@@ -2,10 +2,10 @@
 
 A Node app built with MongoDB, Mocha and swagger. For demonstration purposes only.
 
-Node provides the RESTful API. 
-Swagger for API documentation. 
-MongoDB to store data.
-Mocha and Chai for testing node API
+- Node provides the RESTful API. 
+- Swagger for API documentation. 
+- MongoDB to store data.
+- Mocha and Chai for testing node API
 
 ## Requirements
 
