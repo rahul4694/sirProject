@@ -12,6 +12,11 @@
             ORDER: {
                 id: 2,
                 name: 'order'
+            },
+
+            REQUEST: {
+                id: 3,
+                name: 'request'
             }
         }
     }

@@ -132,6 +132,42 @@
                 "responses":
                 {}
             }
+        },
+
+        "/butler/request/create":
+        {
+            "post":
+            {
+                "summary": "Create request in the system",
+                "tags": [
+                    "BUTLER MANAGEMENT"
+                ],
+                "parameters": [
+                {
+                    "name": "Add Request",
+                    "in": "body",
+                    "description": "Add Request",
+                    "schema":
+                    {
+                        "$ref": "#/definitions/REQUEST_MODEL"
+                    }
+                }],
+                "responses":
+                {}
+            }
+        },
+
+        "/butler/allocateAndReport":
+        {
+            "get":
+            {
+                "summary": "Getting the Resource Allocation Information",
+                "tags": [
+                    "BUTLER MANAGEMENT"
+                ],
+                "responses":
+                {}
+            }
         }
     },
     "definitions":
@@ -149,6 +185,28 @@
                 {
                     "type": "string",
                     "example": "name"
+                }
+            }
+        },
+
+        "REQUEST_MODEL":
+        {
+            "properties":
+            {
+                "clientId":
+                {
+                    "type": "number",
+                    "example": 1
+                },
+                "requestId":
+                {
+                    "type": "string",
+                    "example": "xxxxx"
+                },
+                "hours":
+                {
+                    "type": "number",
+                    "example": 6
                 }
             }
         },

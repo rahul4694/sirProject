@@ -36,7 +36,7 @@ var COMMON_SERVICES = {
         var self = this;
         _.forEach(where, function(value, key, obj) {
             if (key == "q") {
-                console.log("q  running....");
+                // console.log("q  running....");
                 query['$or'] = self._buildOrQuery(options, value);
             } else if (value instanceof Array) {
                 query[key] = { "$in": value }

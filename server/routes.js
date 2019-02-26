@@ -12,6 +12,7 @@ module.exports = function(app) {
     // Insert routes below
     app.use('/api/client', require('./api/client'));
     app.use('/api/order', require('./api/order'));
+    app.use('/api/butler', require('./api/butler'));
     
     // All undefined asset or api routes should return a 404
     app.route('/:url(api|components|)/*')

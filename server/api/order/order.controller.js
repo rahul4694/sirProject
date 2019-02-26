@@ -15,7 +15,7 @@ var request = require('request');
  * Secuirty -> Open
  **************************************************************************************************************************/
 exports.index = function(req, res) {
-    console.log("req.body : ", req.body);
+    // console.log("req.body : ", req.body);
     var requested_where = Services._removeBlankKey(req.body.where);
     var orQueryFields = ["request"]; //Array of field on which user can search order
     var where = {};
@@ -88,7 +88,7 @@ exports.importOrder = function(req, res) {
 
     //Handle Error while fetching data from CSV URl
     function onError(err) {
-        console.log("Error while fetching data from CSV URl : ", err)
+        // console.log("Error while fetching data from CSV URl : ", err)
         return Services._handleError(req, res, err);
 
     }
@@ -126,7 +126,7 @@ exports.importOrder = function(req, res) {
     function importOrderInCollection() {
         Order.create(...orders, function(error, done) {
             if (error) return Services._handleError(req, res, error);
-            console.log("%s Order is imported from csv file out of %s", orders.length, totalOrder);
+            // console.log("%s Order is imported from csv file out of %s", orders.length, totalOrder);
 
             var response = {
                 totalOrderInCSV: totalOrder,
