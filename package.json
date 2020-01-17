@@ -30,7 +30,7 @@
     "express": "^4.16.4",
     "fs-extra": "^2.1.2",
     "jbuilder": "^0.0.5",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "method-override": "^2.3.6",
     "mongoose": "^4.2.7",
     "mongoose-sequence": "^4.0.1",
